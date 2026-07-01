@@ -3,60 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Wiki Jogos</title>
+  <title>Wiki Jogos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page dashboard-page">
-    <header class="site-header dashboard-header">
+  <div class="page">
+    <header class="site-header">
       <div class="brand">
-        <a href="index.html">Wiki Jogos</a>
+        <a href="#">Wiki Jogos</a>
       </div>
-      <div class="dashboard-actions">
-        <span id="userGreeting">Olá, usuário</span>
-        <button id="logoutBtn" class="ghost-button">Sair</button>
+      <div class="search-bar">
+        <input type="search" placeholder="Pesquisar jogos, guias e artigos..." />
+        <button>Buscar</button>
+      </div>
+      <div class="top-actions">
+        <button class="action-button">Entrar</button>
+        <button class="ghost-button" id="anonymousBtn">Entrar como Anônimo</button>
       </div>
     </header>
 
-    <section class="dashboard-intro">
-      <h1>Publicar conteúdo</h1>
-      <p>Adicione imagens, texto, links e artigos para compartilhar com a comunidade.</p>
-    </section>
+    <nav class="main-nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#contato">Contato</a>
+      <a href="#artigos">Artigos</a>
+      <a href="#noticias">Notícias</a>
+    </nav>
 
-    <main class="dashboard-grid">
-      <section class="create-panel">
-        <form id="publishForm">
-          <label for="postTitle">Título do artigo</label>
-          <input type="text" id="postTitle" placeholder="Digite o título" />
-
-          <label for="postText">Texto</label>
-          <textarea id="postText" rows="6" placeholder="Escreva sua publicação..."></textarea>
-
-          <label for="postImage">URL da imagem</label>
-          <input type="url" id="postImage" placeholder="https://exemplo.com/imagem.jpg" />
-
-          <label for="postLink">Link externo</label>
-          <input type="url" id="postLink" placeholder="https://exemplo.com" />
-
-          <button type="submit">Publicar</button>
-        </form>
-      </section>
-
-      <aside class="preview-panel">
-        <div class="preview-card">
-          <h2>Visualização</h2>
-          <div id="previewContent" class="preview-content">
-            <p>Preencha o formulário ao lado para ver como ficará sua publicação.</p>
-          </div>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Bem-vindo à comunidade</p>
+        <h1>Wiki Jogos — o destino para tudo sobre jogos</h1>
+        <p>Explore artigos, guias, dicas e curiosidades em um estilo inspirado pelo Fandom, com navegação simples e conteúdo direto.</p>
+      </div>
+      <div class="hero-info">
+        <div class="hero-card">
+          <span>Em destaque</span>
+          <h2>Guia completo de lançamentos 2026</h2>
+          <p>Veja os principais jogos do ano e descubra o que esperar em cada gênero.</p>
         </div>
-      </aside>
-    </main>
-
-    <section class="published-section">
-      <h2>Publicações recentes</h2>
-      <div id="publishedList" class="published-list"></div>
+      </div>
     </section>
+
+    <div class="content-grid">
+      <main class="main-content">
+        <section id="artigos" class="cards-section">
+          <article class="card">
+            <h3>RPGs que marcaram época</h3>
+            <p>Conheça histórias, mundos e mecânicas que definiram o gênero.</p>
+          </article>
+          <article class="card">
+            <h3>Jogos de ação recomendados</h3>
+            <p>Uma seleção dos melhores títulos para quem busca adrenalina.</p>
+          </article>
+          <article class="card">
+            <h3>Melhores jogos retrô</h3>
+            <p>Clássicos que merecem ser revisitados e as inspirações por trás deles.</p>
+          </article>
+        </section>
+
+        <section id="noticias" class="content-section">
+          <h2>Últimas novidades</h2>
+          <p>Atualizações rápidas para manter você por dentro dos lançamentos e eventos do universo gamer.</p>
+        </section>
+      </main>
+
+      <aside class="sidebar">
+        <section class="login-card">
+          <h2>Login</h2>
+          <form id="loginForm">
+            <label for="username">Nome de usuário</label>
+            <input type="text" id="username" placeholder="Seu usuário" />
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Senha" />
+
+            <button type="submit">Entrar</button>
+          </form>
+          <div id="status" class="status"></div>
+        </section>
+
+        <section id="categorias" class="sidebar-box">
+          <h2>Categorias</h2>
+          <ul>
+            <li>Jogos de ação</li>
+            <li>RPG e aventura</li>
+            <li>eSports</li>
+            <li>Jogos retrô</li>
+            <li>Novidades e lançamentos</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <section id="sobre" class="content-section wide">
+      <h2>Sobre</h2>
+      <p>Esta página é inspirada no estilo Fandom, com foco em jogos e conteúdo colaborativo. Aqui, você encontra informações, curiosidades, guias e seções de destaque.</p>
+    </section>
+
+    <footer class="footer">
+      <p>Wiki Jogos • Página de demonstração</p>
+    </footer>
   </div>
-  <script src="dashboard.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
