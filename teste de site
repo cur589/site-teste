@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Wiki Jogos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page dashboard-page">
+    <header class="site-header dashboard-header">
+      <div class="brand">
+        <a href="index.html">Wiki Jogos</a>
+      </div>
+      <div class="dashboard-actions">
+        <span id="userGreeting">Olá, usuário</span>
+        <button id="logoutBtn" class="ghost-button">Sair</button>
+      </div>
+    </header>
+
+    <section class="dashboard-intro">
+      <h1>Publicar conteúdo</h1>
+      <p>Adicione imagens, texto, links e artigos para compartilhar com a comunidade.</p>
+    </section>
+
+    <main class="dashboard-grid">
+      <section class="create-panel">
+        <form id="publishForm">
+          <label for="postTitle">Título do artigo</label>
+          <input type="text" id="postTitle" placeholder="Digite o título" />
+
+          <label for="postText">Texto</label>
+          <textarea id="postText" rows="6" placeholder="Escreva sua publicação..."></textarea>
+
+          <label for="postImage">URL da imagem</label>
+          <input type="url" id="postImage" placeholder="https://exemplo.com/imagem.jpg" />
+
+          <label for="postLink">Link externo</label>
+          <input type="url" id="postLink" placeholder="https://exemplo.com" />
+
+          <button type="submit">Publicar</button>
+        </form>
+      </section>
+
+      <aside class="preview-panel">
+        <div class="preview-card">
+          <h2>Visualização</h2>
+          <div id="previewContent" class="preview-content">
+            <p>Preencha o formulário ao lado para ver como ficará sua publicação.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="published-section">
+      <h2>Publicações recentes</h2>
+      <div id="publishedList" class="published-list"></div>
+    </section>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
